@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(145deg , rgb(183, 126, 136) , rgb(157, 157, 233));
+    padding: 10px;
+}
+
+.do-list{
+    width: 100px;
+    min-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.do-list h2{
+    color: orchid;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.do-list h2 img{
+    width: 30px;
+    margin-left: 15px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(238, 176, 236);
+    border-radius: 50px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+} 
+
+.row button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: rgb(221, 221, 113);
+    cursor: pointer;
+    color: blueviolet;
+    font-size: 16px;
+    border-radius: 30px;
+} 
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 40px;
+    background-image: url(images/circle.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+
+ul li.checked{
+    color: rgb(138, 25, 140);
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/unchecked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    color: rgb(117, 77, 154);
+    /* for background when i hover the pointer on it */
+    border-radius: 50%; 
+}
+
+/* here below when i hover the pointer it will change the color background*/
+ul li span:hover{
+    background: #edeef0;
+}
